@@ -18,7 +18,7 @@ const APK_DIR = path.join(__dirname, 'public', 'apk');
 const APK_FILENAME = 'LegalMate.apk'; // This should match the actual filename
 
 // Endpoint to download the APK
-app.get('/api/download/apk', (req, res) => {
+app.get('/api/download', (req, res) => {
     const apkPath = path.join(APK_DIR, APK_FILENAME);
     
     // Check if file exists
@@ -30,7 +30,7 @@ app.get('/api/download/apk', (req, res) => {
             }
         });
     } else {
-        res.status(404).send({ message: "APK file not found. Please ensure the APK is uploaded to the server." });
+        res.status(404).send({ message: "APK file not found. Please ensure the APK is uploaded to the server at: " + apkPath });
     }
 });
 
