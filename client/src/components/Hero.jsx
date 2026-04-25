@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Download, Apple } from 'lucide-react';
-import { IOSDownloadModal } from './Modal';
+// import { IOSDownloadModal } from './Modal';
 import './Hero.css';
 
 const Hero = () => {
-  const [isIOSModalOpen, setIsIOSModalOpen] = React.useState(false);
+  // const [isIOSModalOpen, setIsIOSModalOpen] = React.useState(false);
 
   return (
     <section className="hero" id="home">
@@ -36,16 +36,17 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a href="http://localhost:5000/api/download/apk" className="btn btn-primary btn-lg">
+            <a href="http://localhost:5000/api/download/apk" className="btn btn-primary btn-lg pulse-button">
               <Download size={20} />
               Download APK
             </a>
             <button 
-              className="btn btn-secondary btn-lg" 
-              onClick={() => setIsIOSModalOpen(true)}
+              className="btn btn-coming-soon btn-lg"
+              type="button"
             >
               <Apple size={20} />
               iOS Download
+              <span className="coming-soon-badge">Coming Soon</span>
             </button>
           </motion.div>
           <motion.p 
@@ -54,7 +55,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            * Direct download for Android devices
+            * Direct download for Android devices. iOS coming soon.
           </motion.p>
         </div>
 
@@ -87,10 +88,7 @@ const Hero = () => {
       <div className="blob blob-1"></div>
       <div className="blob blob-2"></div>
 
-      <IOSDownloadModal 
-        isOpen={isIOSModalOpen} 
-        onClose={() => setIsIOSModalOpen(false)} 
-      />
+
     </section>
   );
 };
