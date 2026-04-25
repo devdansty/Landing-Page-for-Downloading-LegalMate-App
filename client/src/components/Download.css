@@ -65,27 +65,6 @@
   font-style: italic;
 }
 
-.btn-disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  background-color: #999 !important;
-}
-
-.btn-disabled:hover {
-  background-color: #999 !important;
-}
-
-.coming-soon-badge {
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
 .download-image {
   flex-shrink: 0;
 }
