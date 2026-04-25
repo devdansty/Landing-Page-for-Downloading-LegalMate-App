@@ -32,14 +32,13 @@ const Download = () => {
             </ul>
 
             <div className="download-buttons">
-              <a href={downloadUrl} className="btn btn-primary btn-lg">
+              <a href={downloadUrl} className="btn btn-primary btn-lg pulse-button">
                 <DownloadIcon size={22} />
                 Download Android APK
               </a>
               <button 
-                className="btn btn-secondary btn-lg btn-disabled"
+                className="btn btn-coming-soon btn-lg"
                 onClick={() => setIsIOSModalOpen(true)}
-                disabled
               >
                 <Apple size={22} />
                 iOS Download
