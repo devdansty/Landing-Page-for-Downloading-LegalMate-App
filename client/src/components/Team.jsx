@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
+import { Mail, User } from 'lucide-react';
 import { FiLinkedin, FiTwitter } from 'react-icons/fi';
 import './Team.css';
 
@@ -9,17 +9,14 @@ const Team = () => {
     {
       name: "Sameer Abid",
       role: "Frontend & AI Lead Developer",
-      image: "https://ui-avatars.com/api/?name=Sameer+Abid&background=10300C&color=fff&size=150"
     },
     {
-      name: "Haroon",
-      role: "Engineer",
-      image: "https://ui-avatars.com/api/?name=Haroon&background=10300C&color=fff&size=150"
+      name: "Haroon Shahid",
+      role: "AI Engineer",
     },
     {
       name: "Sudais",
       role: "Project Head",
-      image: "https://ui-avatars.com/api/?name=Sudais&background=10300C&color=fff&size=150"
     }
   ];
 
@@ -58,7 +55,7 @@ const Team = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="team-image">
-                <img src={member.image} alt={member.name} />
+                <User size={80} strokeWidth={1.5} />
               </div>
               <div className="team-info">
                 <h3>{member.name}</h3>
