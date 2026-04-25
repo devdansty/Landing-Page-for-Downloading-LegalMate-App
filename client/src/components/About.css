@@ -35,3 +35,29 @@
   color: var(--text-muted);
   font-size: 0.95rem;
 }
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-card {
+    padding: 30px 20px;
+  }
+
+  .about-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .about-card-title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .about-card-desc {
+    font-size: 0.85rem;
+  }
+}

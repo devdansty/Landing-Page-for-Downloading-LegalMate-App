@@ -101,3 +101,21 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .download {
+    padding: 60px 0;
+  }
+
+  .download-title {
+    font-size: 1.8rem;
+  }
+
+  .download-desc {
+    font-size: 1rem;
+  }
+
+  .download-benefits li {
+    font-size: 0.95rem;
+  }
+}

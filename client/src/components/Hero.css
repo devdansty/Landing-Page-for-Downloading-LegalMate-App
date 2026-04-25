@@ -205,11 +205,71 @@
 }
 
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
+  .hero {
+    padding: 60px 0 60px;
   }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-text {
+    display: none;
+  }
+
   .phone-mockup {
-    width: 260px;
-    height: 550px;
+    width: 240px;
+    height: 490px;
+    border-radius: 36px;
+    padding: 10px;
+    border-width: 3px;
+  }
+
+  .phone-screen {
+    border-radius: 26px;
+  }
+
+  .phone-mockup::before {
+    width: 100px;
+    height: 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .app-header {
+    padding: 30px 15px 15px;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .phone-mockup {
+    width: 200px;
+    height: 410px;
+    border-radius: 32px;
+  }
+  
+  .phone-screen {
+    border-radius: 22px;
   }
 }
