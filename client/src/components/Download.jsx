@@ -7,7 +7,7 @@ import './Download.css';
 
 const Download = () => {
   const [isIOSModalOpen, setIsIOSModalOpen] = React.useState(false);
-  const downloadUrl = "http://localhost:5000/api/download/apk";
+  const downloadUrl = "/api/download";
 
   return (
     <section className="download" id="download">
@@ -32,7 +32,11 @@ const Download = () => {
             </ul>
 
             <div className="download-buttons">
-              <a href={downloadUrl} className="btn btn-primary btn-lg pulse-button">
+              <a 
+                href={downloadUrl} 
+                download="LegalMate.apk"
+                className="btn btn-primary btn-lg pulse-button"
+              >
                 <DownloadIcon size={22} />
                 Download Android APK
               </a>
