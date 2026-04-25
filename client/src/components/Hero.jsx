@@ -41,7 +41,11 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <a href="/api/download" className="btn btn-primary btn-lg pulse-button">
+            <a 
+              href="/api/download" 
+              download="LegalMate.apk"
+              className="btn btn-primary btn-lg pulse-button"
+            >
               <Download size={20} />
               Download APK
             </a>
