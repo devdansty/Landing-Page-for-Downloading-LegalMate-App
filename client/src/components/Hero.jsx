@@ -21,14 +21,22 @@ const Hero = () => {
             <span className="text-primary">for Everyone</span>
           </motion.h1>
           
-          <motion.p 
-            className="hero-subtitle"
+          <motion.div 
+            className="hero-description"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Empowering Pakistani citizens and lawyers with simplified legal guidance, AI document generation, and professional connections.
-          </motion.p>
+            <p className="hero-subtitle">
+              Empowering Pakistani citizens and lawyers with simplified legal guidance, AI document generation, and professional connections.
+            </p>
+            <p className="hero-text">
+              LegalMate is Pakistan's first comprehensive AI-driven legal companion designed to bridge the gap between complex law and the common man. Whether you need to understand your rights, draft professional legal documents in seconds, or find verified lawyers nearby, our platform provides accessible, accurate, and instant solutions tailored to the Pakistani legal framework.
+            </p>
+            <p className="hero-text">
+              By leveraging advanced language models, we simplify legal jargon into plain language, empowering you to navigate the legal landscape with confidence and clarity.
+            </p>
+          </motion.div>
           
           <motion.div 
             className="hero-buttons"
