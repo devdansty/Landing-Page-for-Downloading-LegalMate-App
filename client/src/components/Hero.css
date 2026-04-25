@@ -25,9 +25,22 @@
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+  max-width: 600px;
+}
+
+.hero-description {
   margin-bottom: 40px;
-  max-width: 500px;
+  max-width: 650px;
+}
+
+.hero-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 15px;
 }
 
 .hero-buttons {
