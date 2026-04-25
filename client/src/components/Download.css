@@ -1,0 +1,124 @@
+.download {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 100px 0;
+}
+
+.download-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark);
+  border-radius: 24px;
+  padding: 60px;
+  gap: 40px;
+}
+
+.download-title {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.download-desc {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.download-benefits {
+  margin-bottom: 40px;
+}
+
+.download-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.text-primary {
+  color: #4CAF50; /* Light green for dark bg */
+}
+
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.download .btn-primary {
+  background-color: #4CAF50;
+  color: var(--dark);
+}
+
+.download .btn-primary:hover {
+  background-color: #45a049;
+}
+
+.install-note {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #999 !important;
+}
+
+.btn-disabled:hover {
+  background-color: #999 !important;
+}
+
+.coming-soon-badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.download-image {
+  flex-shrink: 0;
+}
+
+.qr-placeholder {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  color: var(--dark);
+}
+
+.qr-container {
+  background: var(--white);
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 992px) {
+  .download-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .download-benefits li {
+    justify-content: center;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+}
