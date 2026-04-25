@@ -3,10 +3,16 @@ import path from "path";
 
 export default function handler(req, res) {
   try {
-    const filePath = path.join(process.cwd(), "FYP/server/public/apk/app-release.apk");
+    // process.cwd() is the root of your project on Vercel
+    const filePath = path.join(process.cwd(), "server", "public", "apk", "app-release.apk");
+
+    console.log("Checking path:", filePath); // This will show in Vercel logs
 
     if (!fs.existsSync(filePath)) {
-      return res.status(404).send("APK not found");
+      return res.status(404).json({ 
+        error: "APK not found", 
+        checkedPath: filePath 
+      });
     }
 
     const file = fs.readFileSync(filePath);
@@ -14,8 +20,9 @@ export default function handler(req, res) {
     res.setHeader("Content-Type", "application/vnd.android.package-archive");
     res.setHeader("Content-Disposition", "attachment; filename=LegalMate.apk");
 
-    res.send(file);
+    return res.send(file);
   } catch (error) {
-    res.status(500).send("Server error");
+    console.error(error);
+    return res.status(500).send("Server error");
   }
 }
