@@ -7,7 +7,27 @@ import './Download.css';
 
 const Download = () => {
   const [isIOSModalOpen, setIsIOSModalOpen] = React.useState(false);
-  const downloadUrl = "/api/download";
+  
+  // Generate full URL for QR code and direct downloads
+  // Smart detection: works on Vercel, local dev, and all devices (mobile/PC)
+  const getFullDownloadUrl = () => {
+    const protocol = window.location.protocol; // https: or http:
+    
+    // For Vercel/Production: use actual domain
+    // For Local Dev: check environment variable or use config
+    let host = window.location.host;
+    
+    // Development: use VITE_API_HOST if set (from .env.local)
+    // Production: falls back to window.location.host (Vercel domain)
+    if (import.meta.env.VITE_API_HOST) {
+      host = import.meta.env.VITE_API_HOST;
+    }
+    
+    return `${protocol}//${host}/api/download`;
+  };
+  
+  const downloadUrl = getFullDownloadUrl();
+  const directDownloadUrl = "/api/download"; // For regular download button
 
   return (
     <section className="download" id="download">
@@ -33,7 +53,7 @@ const Download = () => {
 
             <div className="download-buttons">
               <a 
-                href={downloadUrl} 
+                href={directDownloadUrl} 
                 download="LegalMate.apk"
                 className="btn btn-primary btn-lg pulse-button"
               >
