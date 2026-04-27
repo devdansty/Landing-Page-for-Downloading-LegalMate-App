@@ -29,4 +29,4 @@ export default function handler(req, res) {
     console.error("Download Error:", error);
     return res.status(500).json({ error: "Internal server error during download" });
   }
-}
+}
