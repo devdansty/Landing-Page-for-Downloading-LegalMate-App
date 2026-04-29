@@ -8,7 +8,7 @@ const Team = () => {
   const team = [
     {
       name: "Sameer Abid",
-      role: "Frontend & AI Lead Developer",
+      role: "Frontend & Lead AI Developer",
     },
     {
       name: "Haroon Shahid",
@@ -16,7 +16,7 @@ const Team = () => {
     },
     {
       name: "Sudais",
-      role: "Project Head",
+      role: "Project Manager",
     }
   ];
 
